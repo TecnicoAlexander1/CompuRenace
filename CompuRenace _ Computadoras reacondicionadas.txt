@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="CompuRenace vende computadoras reacondicionadas de buena calidad a precio justo. Conoce nuestra misión y cómo comprar.">
+<title>CompuRenace | Computadoras reacondicionadas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f3;--surface:#ffffff;--text:#0a0a0a;--muted:#555b63;--line:#dedbd5;
+  --red:#dc2626;--red-ink:#b91c1c;
+  --head:'Bricolage Grotesque','DM Sans',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0a0a0a;--surface:#141517;--text:#f3f4f6;--muted:#a1a7b0;--line:#26292d;--red-ink:#f87171;}
+}
+:root[data-theme="dark"]{--bg:#0a0a0a;--surface:#141517;--text:#f3f4f6;--muted:#a1a7b0;--line:#26292d;--red-ink:#f87171;}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.08;letter-spacing:-.02em;font-weight:700}
+p{margin:0}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:21px;text-decoration:none;letter-spacing:-.01em}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .r{color:var(--red-ink)}
+.top nav a{margin-left:26px;text-decoration:none;font-weight:500;color:var(--muted)}
+.top nav a:hover{color:var(--text)}
+@media (max-width:640px){.top nav{display:none}}
+
+.hero{background-color:#0a0a0a;color:#f3f4f6;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:48px 48px;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 56px),0 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding:76px 0 128px}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.5rem);max-width:13ch}
+.hero .lead{margin-top:22px;font-size:1.2rem;color:#c4c9d0;max-width:46ch}
+.actions{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:10px;font-weight:500;font-size:1rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-red{background:#dc2626;color:#fff}
+.btn-red:hover{background:#b91c1c}
+.btn-line{border-color:#6b7280;color:#f3f4f6}
+.btn-line:hover{border-color:#f3f4f6}
+.hero .gem{justify-self:center;width:min(100%,340px)}
+.hero .gem svg{width:100%;height:auto;display:block}
+.f{transform-origin:100px 100px;animation:assemble .7s cubic-bezier(.2,.8,.2,1) both}
+.f1{animation-delay:.05s}.f2{animation-delay:.15s}.f3{animation-delay:.25s}.f4{animation-delay:.35s}.f5{animation-delay:.45s}.f6{animation-delay:.55s}.fc{animation-delay:.75s}
+@keyframes assemble{from{opacity:0;transform:scale(.5) rotate(-10deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.f{animation:none}html{scroll-behavior:auto}}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:30px;padding:48px 0 104px}
+  .hero .gem{order:-1;width:150px;justify-self:start}
+}
+
+section{padding:76px 0}
+.why{padding-top:40px}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.why h2{font-size:clamp(1.9rem,4vw,2.8rem)}
+.why p{font-size:1.15rem;color:var(--muted);max-width:56ch}
+@media (max-width:760px){.why .wrap{grid-template-columns:1fr;gap:20px}}
+
+.mv .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.mv article{padding-top:22px;border-top:5px solid var(--red)}
+.mv article+article{border-top-color:#6b7280}
+.mv h2{font-size:1.9rem;margin-bottom:16px}
+.mv p{font-size:1.3rem;line-height:1.5;max-width:30ch}
+@media (max-width:760px){.mv .wrap{grid-template-columns:1fr;gap:40px}.mv p{max-width:none}}
+
+.values h2,.how h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:40px}
+.vlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:36px 40px}
+.v svg{width:34px;height:34px;display:block;margin-bottom:14px}
+.v h3{font-size:1.3rem;margin-bottom:8px}
+.v p{color:var(--muted)}
+
+.how{background:var(--surface);border-block:1px solid var(--line)}
+.how .intro{margin:-20px 0 40px;color:var(--muted);font-size:1.15rem;max-width:52ch}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;position:relative;max-width:720px}
+.steps::before{content:"";position:absolute;left:21px;top:8px;bottom:8px;width:3px;background:var(--line)}
+.steps li{counter-increment:step;position:relative;padding:0 0 34px 68px}
+.steps li::before{content:counter(step);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--head);font-weight:700;font-size:1.2rem;display:grid;place-items:center}
+.steps h3{font-size:1.35rem;margin:4px 0 6px}
+.steps p{color:var(--muted);max-width:52ch}
+.delivery{margin-top:12px;max-width:720px;padding:24px 26px;border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:6px;background:var(--bg)}
+.delivery h3{font-size:1.2rem;margin-bottom:8px}
+.delivery ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+
+.cta{background:#0a0a0a;color:#f3f4f6;margin-top:-1px;clip-path:polygon(0 56px,100% 0,100% 100%,0 100%);padding:128px 0 84px}
+.cta h2{font-size:clamp(2rem,5vw,3.4rem);max-width:16ch}
+.cta p{margin-top:18px;color:#c4c9d0;font-size:1.15rem;max-width:46ch}
+footer{background:#0a0a0a;color:#9ca3af;padding:0 0 36px;font-size:.95rem}
+footer .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid #26292d;padding-top:24px}
+footer svg{width:28px;height:28px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 200 200">
+    <rect x="3" y="3" width="194" height="194" rx="46" fill="#0a0a0a" stroke="#374151" stroke-width="3"/>
+    <g stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round">
+      <polygon points="100,100 100,36 155.43,68" fill="#D1D5DB"/>
+      <polygon points="100,100 155.43,68 155.43,132" fill="#9CA3AF"/>
+      <polygon points="100,100 155.43,132 100,164" fill="#DC2626"/>
+      <polygon points="100,100 100,164 44.57,132" fill="#4B5563"/>
+      <polygon points="100,100 44.57,132 44.57,68" fill="#6B7280"/>
+      <polygon points="100,100 44.57,68 100,36" fill="#E5E7EB"/>
+    </g>
+    <polygon points="100,74.4 122.2,87.2 122.2,112.8 100,125.6 77.8,112.8 77.8,87.2" fill="#0a0a0a" stroke="#D1D5DB" stroke-width="2.5" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="CompuRenace, inicio">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span>Compu<span class="r">Renace</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#valores">Valores</a>
+      <a href="#como-comprar">Cómo comprar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Computadoras reacondicionadas que valen lo que cuestan.</h1>
+        <p class="lead">Equipos revisados, con buenos componentes y a precio justo. Elige por lo que tiene por dentro, no solo por la etiqueta.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="#como-comprar">Cómo comprar</a>
+          <a class="btn btn-line" data-ig hidden target="_blank" rel="noopener">Escríbenos por Instagram</a>
+        </div>
+      </div>
+      <div class="gem">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Logo de CompuRenace: una gema tallada con una faceta roja">
+          <rect x="3" y="3" width="194" height="194" rx="46" fill="#0a0a0a" stroke="#374151" stroke-width="3"/>
+          <g stroke="#0a0a0a" stroke-width="2.5" stroke-linejoin="round">
+            <polygon class="f f1" points="100,100 100,36 155.43,68" fill="#D1D5DB"/>
+            <polygon class="f f2" points="100,100 155.43,68 155.43,132" fill="#9CA3AF"/>
+            <polygon class="f f3" points="100,100 155.43,132 100,164" fill="#DC2626"/>
+            <polygon class="f f4" points="100,100 100,164 44.57,132" fill="#4B5563"/>
+            <polygon class="f f5" points="100,100 44.57,132 44.57,68" fill="#6B7280"/>
+            <polygon class="f f6" points="100,100 44.57,68 100,36" fill="#E5E7EB"/>
+          </g>
+          <polygon class="f fc" points="100,74.4 122.2,87.2 122.2,112.8 100,125.6 77.8,112.8 77.8,87.2" fill="#0a0a0a" stroke="#D1D5DB" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section class="why" id="nosotros">
+    <div class="wrap">
+      <h2>Comprar solo por precio puede salir caro.</h2>
+      <p>En el supermercado y en las tiendas grandes es fácil elegir la computadora más barata sin saber qué lleva por dentro: qué procesador, cuánta memoria, de qué marca. Ese ahorro puede costarte caro si el equipo se queda corto a los pocos meses. En CompuRenace reacondicionamos computadoras con buenos componentes y marcas confiables, y las vendemos a un precio que se entiende y se justifica.</p>
+    </div>
+  </section>
+
+  <section class="mv" aria-label="Misión y visión">
+    <div class="wrap">
+      <article>
+        <h2>Misión</h2>
+        <p>Ofrecer computadoras reacondicionadas de buena calidad a un precio justo, y ayudar a las personas a elegir por componentes y marca, no solo por el precio.</p>
+      </article>
+      <article>
+        <h2>Visión</h2>
+        <p>Ser la opción de confianza en computadoras reacondicionadas y cambiar la forma en que la gente compra tecnología: informada, con calidad y sin pagar de más.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="values" id="valores">
+    <div class="wrap">
+      <h2>Lo que nos guía</h2>
+      <div class="vlist">
+        <div class="v">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><polygon points="17,3 31,28 3,28" fill="#DC2626"/></svg>
+          <h3>Calidad real</h3>
+          <p>Elegimos cada equipo por sus componentes y su marca, no por lo barato que se pueda vender.</p>
+        </div>
+        <div class="v">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><polygon points="17,3 31,28 3,28" fill="#9CA3AF"/></svg>
+          <h3>Precio justo</h3>
+          <p>Un buen precio sin sacrificar lo que importa. Pagas por lo que de verdad recibes.</p>
+        </div>
+        <div class="v">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><polygon points="17,3 31,28 3,28" fill="#6B7280"/></svg>
+          <h3>Transparencia</h3>
+          <p>Te decimos qué lleva cada computadora por dentro, sin letras chiquitas.</p>
+        </div>
+        <div class="v">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><polygon points="17,3 31,28 3,28" fill="#4B5563"/></svg>
+          <h3>Segunda vida</h3>
+          <p>Reacondicionar alarga la vida útil de la tecnología y reduce el desperdicio electrónico.</p>
+        </div>
+        <div class="v">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><polygon points="17,3 31,28 3,28" fill="#374151" stroke="#6B7280" stroke-width="1.5"/></svg>
+          <h3>Compra informada</h3>
+          <p>Compartimos lo que sabemos para que elijas con información y no solo por la etiqueta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="como-comprar">
+    <div class="wrap">
+      <h2>Cómo comprar en CompuRenace</h2>
+      <p class="intro">Apartar tu equipo es sencillo y se hace por mensaje directo de Instagram.</p>
+      <ol class="steps">
+        <li>
+          <h3>Elige tu equipo</h3>
+          <p>Escríbenos por DM de Instagram, dinos tu capital. Esto nos ayudara a ofrecerte tu computadora ideal, te mostraremos las opciones que tenemos, y dinos cuál de ellas te interesa.</p>
+        </li>
+        <li>
+          <h3>Deposita la mitad</h3>
+          <p>Haz el depósito de la mitad del valor del producto y guarda tu formato de pago.</p>
+        </li>
+        <li>
+          <h3>Envía tu formato de pago</h3>
+          <p>Mándanos el comprobante por DM de Instagram para confirmar tu compra.</p>
+        </li>
+        <li>
+          <h3>Tu equipo estará listo en 3 a 7 días</h3>
+          <p>Una vez realizado el pago, preparamos tu computadora para su entrega, se cobrara en presencial la otra mitad, si lo quieres manejar en efectivo o transferencia nuevamente.</p>
+        </li>
+      </ol>
+      <div class="delivery">
+        <h3>Entrega</h3>
+        <p>Puedes recibir tu equipo de dos formas, según lo que maneje nuestro distribuidor:</p>
+        <ul>
+          <li>En un punto medio.</li>
+          <li>A domicilio.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="wrap">
+      <h2>Calidad real, precio justo.</h2>
+      <p>Escríbenos por DM de Instagram y cuéntanos qué computadora necesitas.</p>
+      <div class="actions">
+        <a class="btn btn-red" data-ig hidden target="_blank" rel="noopener">Escríbenos por Instagram</a>
+        <a class="btn btn-line" href="#como-comprar">Ver cómo comprar</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg aria-hidden="true"><use href="#mark"/></svg>
+    <span>CompuRenace · Computadoras reacondicionadas</span>
+  </div>
+</footer>
+
+<script>
+  var IG_USER = "";
+  if (IG_USER) {
+    document.querySelectorAll("[data-ig]").forEach(function (a) {
+      a.href = "https://ig.me/m/" + IG_USER;
+      a.hidden = false;
+    });
+  }
+</script>
+</body>
+</html>
