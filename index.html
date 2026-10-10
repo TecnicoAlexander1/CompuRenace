@@ -97,6 +97,20 @@ section{padding:76px 0}
 .delivery h3{font-size:1.2rem;margin-bottom:8px}
 .delivery ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
 
+
+.svc h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.svc .intro{color:var(--muted);font-size:1.15rem;max-width:56ch;margin-bottom:44px}
+.svc-list{display:grid;gap:44px}
+.svc-item{display:grid;grid-template-columns:.8fr 1.6fr;gap:12px 48px;align-items:start}
+.svc-item h3{font-size:1.5rem}
+.svc-item .desc{color:var(--muted);max-width:56ch}
+.pay{margin-top:14px;padding:14px 18px;border-left:5px solid var(--red);background:var(--surface);border-radius:4px;max-width:60ch}
+.pay b{font-family:var(--head)}
+.svc-note{margin-top:48px;max-width:720px;padding:22px 26px;border:1.5px solid var(--line);border-radius:6px;background:var(--surface)}
+.svc-note h3{font-size:1.2rem;margin-bottom:6px}
+.svc-note p{color:var(--muted)}
+@media (max-width:760px){.svc-item{grid-template-columns:1fr;gap:8px}}
+
 .cta{background:#0a0a0a;color:#f3f4f6;margin-top:-1px;clip-path:polygon(0 56px,100% 0,100% 100%,0 100%);padding:128px 0 84px}
 .cta h2{font-size:clamp(2rem,5vw,3.4rem);max-width:16ch}
 .cta p{margin-top:18px;color:#c4c9d0;font-size:1.15rem;max-width:46ch}
@@ -132,6 +146,7 @@ footer svg{width:28px;height:28px}
       <a href="#nosotros">Nosotros</a>
       <a href="#valores">Valores</a>
       <a href="#como-comprar">Cómo comprar</a>
+      <a href="#otros-servicios">Otros servicios</a>
     </nav>
   </div>
 </header>
@@ -224,7 +239,7 @@ footer svg{width:28px;height:28px}
       <ol class="steps">
         <li>
           <h3>Elige tu equipo</h3>
-          <p>Escríbenos por DM de Instagram, dinos tu capital. Esto nos ayudara a ofrecerte tu computadora ideal, te mostraremos las opciones que tenemos, y dinos cuál de ellas te interesa.</p>
+          <p>Escríbenos por DM de Instagram y dinos tu capital. Esto nos ayudará a ofrecerte tu computadora ideal. Te mostraremos las opciones que tenemos y tú nos dices cuál te interesa.</p>
         </li>
         <li>
           <h3>Deposita la mitad</h3>
@@ -236,7 +251,7 @@ footer svg{width:28px;height:28px}
         </li>
         <li>
           <h3>Tu equipo estará listo en 3 a 7 días</h3>
-          <p>Una vez realizado el pago, preparamos tu computadora para su entrega, se cobrara en presencial la otra mitad, si lo quieres manejar en efectivo o transferencia nuevamente.</p>
+          <p>Una vez realizado el pago, preparamos tu computadora para su entrega. La otra mitad se cobra en persona, en efectivo o por transferencia, como prefieras.</p>
         </li>
       </ol>
       <div class="delivery">
@@ -246,6 +261,47 @@ footer svg{width:28px;height:28px}
           <li>En un punto medio.</li>
           <li>A domicilio.</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc" id="otros-servicios">
+    <div class="wrap">
+      <h2>Además de computadoras</h2>
+      <p class="intro">También ofrecemos licencias, cuentas de streaming, tablas de Excel y páginas web. Así se paga cada una.</p>
+      <div class="svc-list">
+        <div class="svc-item">
+          <h3>Licencias</h3>
+          <div>
+            <p class="desc">Licencias de software con pago único: pagas una sola vez.</p>
+            <p class="pay"><b>Cómo se paga:</b> transfieres el costo y nos mandas tu comprobante por DM de Instagram. Te enviamos tu código de 25 caracteres, listo para usarse.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <h3>Cuentas de streaming</h3>
+          <div>
+            <p class="desc">Cuentas de streaming listas para que disfrutes tus series y películas.</p>
+            <p class="pay"><b>Cómo se paga:</b> se transfiere el costo completo de la cuenta. Mándanos tu comprobante por DM de Instagram, igual que en cualquier otro producto, y te entregamos tu cuenta.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <h3>Tablas de Excel</h3>
+          <div>
+            <p class="desc">Tablas de Excel hechas a tu medida, a partir de lo que necesitas organizar o calcular.</p>
+            <p class="pay"><b>Cómo se paga:</b> primero cuéntanos tu idea por DM de Instagram y, con base en ella, te hacemos tu cotización. Transfieres el costo, nos mandas tu comprobante y te enviamos tu documento listo.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <h3>Páginas web</h3>
+          <div>
+            <p class="desc">Páginas web diseñadas a partir de tu idea, para presentar tu negocio o tu proyecto.</p>
+            <p class="pay"><b>Cómo se paga:</b> primero cuéntanos tu idea por DM de Instagram y, con base en ella, te hacemos tu cotización. Transfieres el costo, nos mandas tu comprobante y te enviamos tu página lista.</p>
+          </div>
+        </div>
+      </div>
+      <div class="svc-note">
+        <h3>En todos los productos</h3>
+        <p>El pago se hace por transferencia y el comprobante se envía por DM de Instagram. En tablas de Excel y páginas web, antes de pagar te damos tu cotización según tu idea.</p>
       </div>
     </div>
   </section>
